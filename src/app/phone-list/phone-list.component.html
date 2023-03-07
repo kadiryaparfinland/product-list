@@ -1,0 +1,71 @@
+<div class="main-content">
+    <h1>Listview</h1>
+    <div class="flex-container">
+    <div class="left-content">
+      <h6>Search</h6>
+      <div class="input-group mb-3 search-area-input">
+        <!-- this is search area -->
+        <input (keyup)="onKey($event)" type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="basic-addon2">
+        <!-- <p>{{searchText}}</p> -->
+      </div>
+      <div class="sort-div">
+        <h6>Sort by:</h6>
+        <select #selectedOption (change)="onSelected(selectedOption.value)">
+          <option *ngFor="let item of options">{{item.name}}</option>
+        </select>
+        
+      </div>
+    </div>
+    <div class="right-content" *ngIf="option">
+              
+                <div class="card card-body" *ngFor="let item of productList">
+                            <div class="media" (click)="goToMovieDetails(item.id)">
+                                <div class="mr-2 mb-3 mb-lg-0">
+                                    
+                                        <img src="{{item.imageUrl}}" width="150" height="150" alt="">
+                                   
+                                </div>
+    
+                                <div class="media-body">
+                                    <h6 class="media-title font-weight-semibold">
+                                        <h6 style="color: blue;">{{item.name}}</h6>
+                                    </h6>
+    
+                                    <p class="mb-3">{{item.snippet}}</p>
+    
+                                </div>
+    
+                               
+                            </div>
+                        </div>
+    
+    </div>
+
+    <div class="right-content" *ngIf="!option">
+              
+      <div class="card card-body" *ngFor="let item of productList">
+                  <div class="media" (click)="goToMovieDetails(item.id)">
+                      <div class="mr-2 mb-3 mb-lg-0">
+                          
+                              <img src="{{item.imageUrl}}" width="150" height="150" alt="">
+                         
+                      </div>
+
+                      <div class="media-body">
+                          <h6 class="media-title font-weight-semibold">
+                              <h6 style="color: blue;">{{item.name}}</h6>
+                          </h6>
+
+                          <p class="mb-3">{{item.snippet}}</p>
+
+                      </div>
+
+                     
+                  </div>
+              </div>
+
+</div>
+    
+
+    </div>
+    </div>
