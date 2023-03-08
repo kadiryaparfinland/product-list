@@ -1,1 +1,115 @@
-<p>phone-details works!</p>
+<div class="main-content">
+  <div class="main-img-main-info">
+    <div class="main-img">
+      <img [src]="imageUrl" alt="" />
+    </div>
+    <div class="main-info">
+      <div class="main-title">
+        <h1>{{mainTitle}}</h1>
+      </div>
+      <div class="main-detail">
+        <p>
+          {{mainDescription}}
+        </p>
+      </div>
+      <div class="product-images">
+      <div  *ngFor="let item of imageUrls">
+        <img class="small-image" src="../assets/{{item}}" alt=""  (click)="changeImage(item)"/>
+      </div>
+    </div>
+    </div>
+  </div>
+  <div class="detail-content">
+    <div class="feature-one">
+        <h4>
+            Availability and Networks
+        </h4>
+        <h6>
+          Availability
+        </h6>
+        <p *ngFor="let i of availability">{{i}}</p>
+    </div>
+    <div class="feature-two">
+        <h4>
+            Battery
+        </h4>
+        <div>
+          <h6>
+            Type
+        </h6>
+        <p>
+          {{type}}
+        </p>
+        </div>
+        <div>
+          <h6>
+            TalkTime
+        </h6>
+        <p>
+          {{talkTime}}
+        </p>
+        </div>
+        <div>
+          <h6>
+            StandbyTime
+        </h6>
+        <p>
+          {{standbyTime}}
+        </p>
+        </div>
+    </div>
+    <div class="feature-three">
+      
+        <h4>
+            Storage and Memory
+        </h4>
+        <div>
+        <h6>
+          Flash
+        </h6>
+        <p>{{flash}}</p>
+      </div>
+      <div>
+        <h6>
+          Ram
+        </h6>
+        <p>{{ram}}</p>
+      </div>
+    </div>
+    <div class="feature-four">
+        <h4>
+            Connectivity
+        </h4>
+        <div>
+        <h6>
+          Bluetooth
+        </h6>
+        <p>{{bluetooth}}</p>
+      </div>
+      <div>
+        <h6>
+          Cell
+        </h6>
+        <p>{{cell}}</p>
+      </div>
+      <div>
+        <h6>
+          Gps
+        </h6>
+        <p>{{gps}}</p>
+      </div>
+      <div>
+        <h6>
+          Infrared
+        </h6>
+        <p>{{infrared}}</p>
+      </div>
+      <div>
+        <h6>
+          Wifi
+        </h6>
+        <p>{{wifi}}</p>
+      </div>
+    </div>
+  </div>
+</div>

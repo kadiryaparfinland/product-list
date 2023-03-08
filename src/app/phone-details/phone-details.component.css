@@ -1,0 +1,40 @@
+.main-content{
+    margin-top: 30px;
+    margin-left: 100px;
+    margin-right: 200px;
+}
+
+.main-img-main-info{
+    display: flex;
+    flex-direction: row;
+}
+.main-info{
+    margin-left: 75px;
+}
+
+.main-img{
+    align-self: center;
+}
+h1{
+    text-decoration-line: underline;
+}
+
+.product-images{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.small-image{
+    width: 150px;
+    margin: 10px;
+    cursor: pointer;
+    border: 2px solid black;
+}
+
+.detail-content{
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    justify-content: space-evenly;
+}
